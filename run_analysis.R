@@ -48,4 +48,4 @@ dataSet2  <- aggregate(dataSet[,names(dataSet) != c('activity','subject')],by=li
 dataSet2    = merge(dataSet2,activityLabels,by='activity',all.x=TRUE)
 
 #export the "average" data set
-write.csv(dataSet2,"dataSet2.csv")
+write.table(dataSet2,"dataSetTidy.txt", row.name=FALSE)
